@@ -1,0 +1,74 @@
+\documentclass{article}
+
+\begin{document}
+
+\(\mu=Population Mean\)\\
+\(\bar{x}=Sample Mean\)\\
+\(\mu - \bar{x}=Sample Error\)
+
+\section{Lesson 1 Notes}
+  independent variable is the predictor
+  dependent variable is the outcome 
+
+  Correlation does not prove Causation
+
+  Show Relationships then use Observational Studies / Surveys
+  Show Causation requires a Controlled Experiment
+
+  Benefits of Surveys
+  Easy way to get information on a population
+  Relatively inexpensive
+  Can be conducted remotely
+  Anyone can access and analyze results
+
+  Downsides of Surveys
+  Untruthful responses
+  Biased responses
+  Respondents not understanding the question (response bias)
+  Respondents refusing to answer (non-response bias)
+
+
+  Controlled Experiment
+  Blinding - participant not told which treatment (actual or palcebo) they are receiving
+  control group receives placebo
+  Double Blind - researchers do not know which treatment participants received
+  
+\section{Lesson 3 Notes}
+
+population mean = \(\sum_{i=1}^{N} \frac{x_i}{N}\)
+sample mean = \(\sum_{i=1}^{n} \frac{x_i}{n}\)
+where N = population size
+and n = sample size
+
+\section{Lesson 4 Notes}
+a data point is an outlier if it is less than Q1 - 1.5(IQR)
+or greater than Q3 + 1.5(IQR)
+where IQR is the inter-quartile range
+
+variance
+\(\Sigma \frac{(x - \bar{x})^2}{n}\)
+
+\section{Lesson 5 and 6 Notes}
+z score for a population
+\( z = \frac{x - \mu}{\sigma}\) 
+
+\section{Lesson 7 Notes}
+
+Standard Error
+\( \frac{\sigma}{\sqrt{n}}\)
+where n = sample size
+
+\section{Lesson 8 Notes}
+z score for a sample mean\\
+\( z = \frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt{n}}} \)\\
+95\% of sample means will fall within \( \frac{1.96\sigma}{\sqrt{n}} \)\\
+\( \bar{x} \pm \frac{1.96\sigma}{\sqrt{n}} \) is a 95\% confidence interval around the sample mean
+
+\section{Lesson 9 Notes}
+alpha levels\\
+\( \alpha = .05 \)\\
+\( \alpha = .01 \)\\
+\( \alpha = .001 \)\\
+
+
+\end{document}
