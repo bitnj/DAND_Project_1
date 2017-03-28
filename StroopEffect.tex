@@ -36,16 +36,21 @@ The \textbf{independent variable} can take on two values: congruent or incongrue
     Null Hypothesis: \( H_0: \mu_C = \mu_I \)\\
     Alternative Hypothesis: \( H_1: \mu_C < \mu_I \)\\
     
-    Because the sample is a dependent sample I am using the following formulation for the standard deviation: \\
+    The null hypothesis states that the mean time in seconds for the congruent test (\(\mu_C \)) will be the same as the mean time for the incongruency test (\(\mu_I \)).  This could also be stated as \( \mu_C - \mu_I = 0 \).  Because we expect the incongruent test to take longer the alternative hypothesis states that the mean time in seconds of the congruent test will be less than the mean time in seconds of the incongruent test.
+    
+    In order to perform the t-test we need to calculate a t statistic.  Because the sample is dependent we first calculate the difference between each pair of observations \( d_i = x_i - y_i \) and then calculate the mean (\( \bar{d}=-7.965\)) and standard deviation of those differences (\( S_d=4.865 \)).  The standard error is then calculated as follows:
     \begin{center}
-      \( \sqrt{S_C^2 + S_I^2} \)\\
+      \( SE(\bar{d}) = \frac{S_d}{\sqrt{n}}=\frac{4.865}{\sqrt{24}}=.993\)\\
     \end{center}
-    where \( S_C^2 \) is the variance of the congruent test results and \( S_I^2 \) is the variance of the incongruent test results.\\
+    and the resulting t statistic is then: \\
+    \begin{center}
+      \( t = \frac{\bar{d}}{SE(\bar{d})}=\frac{-7.965}{.993} = -8.021 \)
+    \end{center}
   \end{itemize}
   
 \section{Question 3}
   \begin{itemize}
-    \item \textbf{Report some descriptive statistics regarding this dataset.  Include at least one measure of central tendency and at least one measure of variability}\\
+    \item \textbf{Report some descriptive statistics regarding this dataset.  Include at least one measure of central tendency and at least one measure of variability.}\\
     \begin{center}
       \begin{tabular}{|| l c c ||}
       \hline
@@ -65,15 +70,17 @@ The \textbf{independent variable} can take on two values: congruent or incongrue
   
 \section{Question 4}
   \begin{itemize}
-    \item \textbf{Provide one or two visualizations that show the distribution of the sample data.  Write one or two sentences noting what you observe about the plot(s)}\\
-    \includegraphics[scale=.5]{congruent_histogram}\\
-    \includegraphics[scale=.5]{incongruent_histogram}\\
-    The sample size is rather small, but there is still a relatively normal shape to both distributions.  In both the congruent and incongruent samples there are outliers above the mean.
+    \item \textbf{Provide one or two visualizations that show the distribution of the sample data.  Write one or two sentences noting what you observe about the plot(s).}\\
+    \includegraphics[scale=.60]{congruent_histogram}\\
+    \includegraphics[scale=.60]{incongruent_histogram}\\
+
+    The sample size is rather small, but there is still a relatively normal shape to both distributions.  In the incongruent sample there are outliers above the mean, which is clearly shown in the boxplot below.\\
+    \includegraphics[scale=.5]{boxplot}\\
   \end{itemize}
   
 \section{Question 5}
   \begin{itemize}
-    \item \textbf{Now, perform the statistical test and report your results. What is your confidence level and critical statistic value?}
+    \item \textbf{Now, perform the statistical test and report your results. What is your confidence level and critical statistic value?}\\
     \begin{center}
       \begin{tabular}{|| l c||}
       \hline
@@ -83,12 +90,12 @@ The \textbf{independent variable} can take on two values: congruent or incongrue
       \hline
       critical t & -1.714 \\
       \hline
-      t statistic & -6.532 \\
+      t statistic & -8.021 \\
       \hline
       \end{tabular}
     \end{center}
     
-    \item \textbf{Do you reject the NULL hypothesis or fail to reject it?}
+    \item \textbf{Do you reject the NULL hypothesis or fail to reject it?}\\
     Given the critical value of t and the calculated t statistic we will reject the NULL hypothesis and accept the alternative hypothesis that \( \mu_C < \mu_I \).
     \item \textbf{Come to a conclusion in terms of the experiment task.  Did the results match up with your expectations?}
     The results provide strong evidence that the mean time to complete the incongruent version of the test take longer than the congruent test.  The t statistic calculated from our sample suggest that our result is extremely statistically significant.  The P value for the calculated t statistic and 23 degrees of freedom is less than .0001.
@@ -107,5 +114,6 @@ The \textbf{independent variable} can take on two values: congruent or incongrue
     \item Udacity lectures
     \item Wikipedia
     \item GraphPad (for calculating P value of result)
+    \item Matplotlib.org and http://blog.bharatbhole.com/creating-boxplots-with-matplotlib/ for the basic boxplot
   \end{itemize}
 \end{document}
